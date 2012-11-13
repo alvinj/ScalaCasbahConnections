@@ -21,3 +21,10 @@ The project consists of the following simple classes and objects under the src/m
 
 Per the docs (http://api.mongodb.org/scala/casbah/current/index.html) I'm using Casbah 2.1.5, with Scala 2.9.1.
 
+Contact
+-------
+
+If you have any questions, you can reach me at http://alvinalexander.com
+
+Alvin Alexander
+
