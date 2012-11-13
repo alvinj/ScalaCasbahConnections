@@ -13,12 +13,12 @@ object MainDriver extends App {
     println("debug: " + x) 
     val s = Stock(x.toString, x.toString)
     Stock.save(s)
-    Thread.sleep(1000)
+    Thread.sleep(100)
   }
   
   // give me time to check the database connections
   println("sleeping at the end")
-  Thread.sleep(30*1000)
+  Thread.sleep(1*1000)
   println("game over")
 
 }
