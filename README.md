@@ -7,7 +7,7 @@ I was having a problem where Casbah appeared to be leaking connections, as shown
 
     sudo lsof | grep mongod | grep TCP
 
-However, the latest code fixed that problem, and now only one connection is used at a time.
+However, the latest code fixed that problem, and now only one connection is used at a time (as the current code is single-threaded).
 
 
 Information
