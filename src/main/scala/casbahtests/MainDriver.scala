@@ -8,11 +8,11 @@ import com.mongodb.casbah.Imports._
  */
 object MainDriver extends App {
 
-  // create some fake stocks
+  // create a series of fake stocks so i can simultaneously look at the open
+  // connections from the command line
   for (x <- 'a' to 'z') {
-    println("debug: " + x) 
-    val s = Stock(x.toString, x.toString)
-    Stock.save(s)
+    println("debug: " + x)
+    Stock.save(Stock(x.toString, x.toString))  // create a new stock and save it
     Thread.sleep(1000)
   }
   

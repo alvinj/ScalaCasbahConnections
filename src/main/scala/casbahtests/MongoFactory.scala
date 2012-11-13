@@ -13,7 +13,9 @@ object MongoFactory {
   val connection = MongoConnection(SERVER)
   val collection = connection(DATABASE)(COLLECTION)
 
-//  def connection = MongoConnection(SERVER) 
-//  def collection(conn: MongoConnection) = conn(DATABASE)(COLLECTION)
+// this is part of what i was doing wrong before; to get a handle to a collection,
+// i was passing a connection into getCollection
+//  val getConnection = MongoConnection(SERVER) 
+//  def getCollection(conn: MongoConnection) = conn(DATABASE)(COLLECTION)
 
 }
