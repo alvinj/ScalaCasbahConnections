@@ -3,6 +3,12 @@ A project to test Casbah connections
 
 This is a project to help me test Casbah connections and connection pools with MongoDB and Scala. It's configured as an SBT project.
 
+I was having a problem where Casbah appeared to be leaking connections, as shown with this command from the command line:
+
+    sudo lsof | grep mongod | grep TCP
+
+However, the latest code fixed that problem, and now only one connection is used at a time.
+
 
 Information
 -----------
