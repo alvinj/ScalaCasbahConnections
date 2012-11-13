@@ -10,7 +10,10 @@ object MongoFactory {
   private val DATABASE = "finance"
   private val COLLECTION = "stocks"
 
-  def connection = MongoConnection(SERVER) 
-  def collection(conn: MongoConnection) = conn(DATABASE)(COLLECTION)
+  val connection = MongoConnection(SERVER)
+  val collection = connection(DATABASE)(COLLECTION)
+
+//  def connection = MongoConnection(SERVER) 
+//  def collection(conn: MongoConnection) = conn(DATABASE)(COLLECTION)
 
 }

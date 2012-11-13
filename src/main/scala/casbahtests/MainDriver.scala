@@ -7,19 +7,26 @@ import com.mongodb.casbah.Imports._
  * Look at open database connections with 'sudo lsof | grep mongod | grep TCP'
  */
 object MainDriver extends App {
-  
+
   // create some fake stocks
   for (x <- 'a' to 'z') {
     println("debug: " + x) 
     val s = Stock(x.toString, x.toString)
     Stock.save(s)
-    Thread.sleep(100)
+    Thread.sleep(1000)
   }
   
   // give me time to check the database connections
-  println("sleeping at the end")
-  Thread.sleep(1*1000)
-  println("game over")
+  sleepAtTheEnd
 
+  def sleepAtTheEnd {
+    println("sleeping at the end")
+    for (i <- 1 to 30) {
+      println("  sleeping: " + i)
+      Thread.sleep(1000)
+    }
+    println("game over")
+  }
+  
 }
 

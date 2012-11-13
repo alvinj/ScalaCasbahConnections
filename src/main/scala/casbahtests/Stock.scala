@@ -16,7 +16,7 @@ object Stock {
   
   def save(stock: Stock) {
     val mongoDbObject = buildMongoDbObjectFromStock(stock)
-    MongoFactory.collection(MongoFactory.connection).save(mongoDbObject)
+    MongoFactory.collection.save(mongoDbObject)
   }
   
   /**
