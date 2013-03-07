@@ -1,6 +1,5 @@
 package casbahtests
 
-import com.mongodb.casbah.MongoCollection
 import com.mongodb.casbah.MongoConnection
 
 object MongoFactory {
